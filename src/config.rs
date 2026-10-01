@@ -114,8 +114,11 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["rs-ny.rustdesk.com"];
-pub const RS_PUB_KEY: &str = "OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=";
+// [School Custom] 校内课堂投屏定制：默认指向校内 hbbs/hbbr（192.168.8.10）。
+// RS_PUB_KEY 部署服务器后从服务端 id_ed25519.pub 取内容替换（docker compose logs hbbs 可见）。
+// 详见仓库根目录 SCHOOL_BUILD.md。
+pub const RENDEZVOUS_SERVERS: &[&str] = &["192.168.8.10"];
+pub const RS_PUB_KEY: &str = "REPLACE_WITH_HBBS_ID_ED25519_PUB";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
